@@ -118,6 +118,8 @@ displacement.texture = new THREE.CanvasTexture(displacement.canvas)
  * Particles
  */
 const particlesGeometry = new THREE.PlaneGeometry(10, 10, 128, 128)
+particlesGeometry.setIndex(null)
+particlesGeometry.deleteAttribute('normal')
 
 const intensityArray = new Float32Array(particlesGeometry.attributes.position.count)
 const anglesArray = new Float32Array(particlesGeometry.attributes.position.count)
